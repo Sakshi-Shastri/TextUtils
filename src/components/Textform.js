@@ -59,22 +59,22 @@ export default function Textform(props) {
             </textarea>
           </div>
 
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleUpClick}>
+          <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleUpClick}>
             Convert to Uppercase
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleLowClick}>
+          <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleLowClick}>
             Convert to Lowercase
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleColor}>
+          <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleColor}>
             Preview in {props.mode === "success" ? "Green" : "White"}
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleHighlightVowels}>
+          <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleHighlightVowels}>
             Highlight Vowels
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleCopyText}>
+          <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleCopyText}>
             Copy to Clipboard
           </button>
-           <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleClearText}>
+           <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleClearText}>
             Clear Text
           </button>
 
