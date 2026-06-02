@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.alert {
+  padding: 0.7rem;
+  line-height: 1.2;      /* tweak text spacing */
+  font-size: 0.875rem;       /* optional: adjust text size */
+}

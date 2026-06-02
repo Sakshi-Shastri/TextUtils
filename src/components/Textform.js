@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Textform(props) {
-  document.title = "TextUtils - Home";
+  document.title = "TextUtils - Home | Word Counter | Character Counter | Remove extra spaces";
   const [text, setText] = useState("");
   const handleUpClick = () =>{
    setText(text.toUpperCase());
@@ -11,8 +11,8 @@ export default function Textform(props) {
    setText(text.toLowerCase());
    props.showAlert("Converted to lowercase.", "success");
   }
-  const handleColor = () =>{
-    document.getElementById("preview").style.color = (props.mode === "success" ? "green" : "white");
+  /*const handleColor = () =>{
+    document.getElementById("preview").style.color = (props.mode === "success" && text!==0 ? "green" : "white");
     document.getElementById("preview").style.fontWeight = "bold";
     props.showAlert("Preview color got changed.", "success");
   }
@@ -44,8 +44,8 @@ export default function Textform(props) {
   return (
     <>
      <div>
-          <div className="mb-3" style={{color: props.mode === "success" ? "black" : "white"}}>
-            <h1>{props.heading}</h1>
+          <div className="mb-4" style={{color: props.mode === "success" ? "black" : "white"}}>
+            <h2>{props.heading}</h2>
             
             <textarea
               className="form-control"
@@ -59,31 +59,31 @@ export default function Textform(props) {
             </textarea>
           </div>
 
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleUpClick}>
+          <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleUpClick}>
             Convert to Uppercase
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleLowClick}>
+          <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleLowClick}>
             Convert to Lowercase
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleColor}>
+         {/* <button type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleColor}>
             Preview in {props.mode === "success" ? "Green" : "White"}
-          </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleHighlightVowels}>
+          </button>*/}
+          <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleHighlightVowels}>
             Highlight Vowels
           </button>
-          <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleCopyText}>
+          <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleCopyText}>
             Copy to Clipboard
           </button>
-           <button type="submit" className={`btn btn-${props.mode} mx-1`} onClick={handleClearText}>
+           <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleClearText}>
             Clear Text
           </button>
 
       </div>
       <div className="container my-3" style={{color: props.mode === "success" ? "black" : "white"}}>
         <h3>Your text summary</h3>
-        <p>{text == "" ? 0 : text.split(" ").length} words and {text.length} characters</p>
+        <p>{text.split(" ").filter((word)=>{return word.length !== 0}).length} words and {text.length} characters</p>
         <h3>Preview</h3>
-        <p id = "preview">{text == "" ? "Enter text to get a preview here" : text}</p>
+        <p id = "preview">{text == "" ? "Nothing to preview! Enter some text above to preview it here." : text}</p>
       </div>
     </>
   );
