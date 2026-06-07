@@ -59,6 +59,7 @@ export default function Textform(props) {
             </textarea>
           </div>
 
+
           <button disabled={text.length === 0} type="submit" className={`btn btn-${props.mode} m-1`} onClick={handleUpClick}>
             Convert to Uppercase
           </button>
