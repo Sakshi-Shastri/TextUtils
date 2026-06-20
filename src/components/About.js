@@ -41,7 +41,7 @@ return (
           <div className="card-header" id="headingOne" style = {myStyle}>
             <h5 className="mb-0">
               <h3>
-               History of TextUtils
+               More about TextUtils
               </h3>
             </h5>
           </div>
@@ -51,34 +51,23 @@ return (
             className="collapse show"
             aria-labelledby="headingOne"
             data-parent="#accordion"
-           
           >
-            <div className="card-body" style = {myStyle}>
-              History of TextUtils: TextUtils was created in 2020 by a team of developers who wanted to provide a simple and efficient way for users to manipulate and analyze text. The idea was born out of the need for a tool that could handle various text processing tasks without requiring users to have advanced programming skills. Over the years, TextUtils has evolved and expanded its features, becoming a popular choice for individuals and businesses alike for tasks such as text transformation, analysis, and formatting.
-            As of 2024, TextUtils continues to be actively developed and maintained, with regular updates and new features being added based on user feedback and emerging trends in text processing. The tool has gained a strong user base and is widely used for both personal and professional purposes, making it a go-to solution for anyone looking to work with text in a more efficient and user-friendly way.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="accordion" >
-        <div className="card my-3">
-          <div className="card-header" id="headingOne" style = {myStyle}>
-            <h5 className="mb-0" >
-               <h3>
-               Geography of TextUtils
-              </h3>
-            </h5>
-          </div>
-
-          <div
-            id="collapseOne"
-            className="collapse show"
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
-           
-          >
-            <div className="card-body" style = {myStyle}>
-                Geography of TextUtils: TextUtils is a web-based application that can be accessed from anywhere in the world with an internet connection. It is hosted on cloud servers, allowing users to access it from their computers, tablets, or smartphones without the need for any installation. The tool is designed to be responsive and compatible with various devices and browsers, ensuring that users can work with their text efficiently regardless of their location or device. Additionally, TextUtils has a global user base, with users from different countries and regions utilizing the tool for their text processing needs. This widespread accessibility has contributed to its popularity and success as a go-to solution for text manipulation and analysis.
+            <div className="card-body" style={myStyle}>
+              <div className="row align-items-center">
+                <div className="col-md-8">
+                  <p>
+                    TextUtils was created in 2026 by Sakshi Shastri, a software developer with a passion for creating tools that enhance productivity and simplify tasks. The idea for TextUtils originated from the need for a versatile text manipulation tool that could handle various text processing tasks efficiently. Over the years, TextUtils has evolved and expanded its features based on user feedback and technological advancements. It has become a popular choice among students, writers, and professionals for its user-friendly interface and powerful text manipulation capabilities. Today, TextUtils continues to be actively developed and maintained, with regular updates and new features being added to meet the changing needs of its users.
+                  </p>
+                </div>
+                <div className="col-md-4 text-center">
+                  <img
+                    src="/profile-pic.jpg"
+                    alt="Profile"
+                    className="img-fluid rounded"
+                    style={{ width: '200px' }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
